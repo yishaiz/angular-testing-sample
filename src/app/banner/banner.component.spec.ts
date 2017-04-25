@@ -49,6 +49,18 @@ describe('BannerComponent - 123456', () => {
     expect(el.textContent).toContain('Test Title');
   });
 
+  it('no title in the DOM until manually call `detectChanges`', () => {
+    expect(el.textContent).toEqual('');
+
+    comp.title = 'Test Title';
+    expect(el.textContent).toEqual('');
+
+    fixture.detectChanges();
+    expect(el.textContent).toEqual('Test Title');
+  });
+
+
+
 
 });
 
