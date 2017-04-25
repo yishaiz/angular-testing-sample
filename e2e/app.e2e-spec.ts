@@ -7,8 +7,8 @@ describe('angular-testing-sample App', () => {
     page = new AngularTestingSamplePage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying app works with tests', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('app works with tests !');
   });
 });
