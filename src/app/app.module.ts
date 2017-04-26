@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
+import { BannerExternalTemplateComponent } from './banner-external-template/banner-external-template.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BannerComponent
+    BannerComponent,
+    BannerExternalTemplateComponent
   ],
   imports: [
     BrowserModule,

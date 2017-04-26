@@ -5,8 +5,7 @@ import { ComponentFixtureAutoDetect } from '@angular/core/testing';
 
 import { BannerComponent } from  './banner.component';
 
-
-xdescribe('BannerComponent - Auto Change Detection', () => {
+ describe('BannerComponent - Auto Change Detection', () => {
 
   let comp : BannerComponent;
   let fixture : ComponentFixture<BannerComponent>;
@@ -35,11 +34,12 @@ xdescribe('BannerComponent - Auto Change Detection', () => {
   });
 
 
-  it('should display original title', () => {
+   it('should display original title', () => {
     // fixture.detectChanges();
 
     console.log(el.textContent);
     console.log(comp.title);
+    console.log(new Date());
 
     expect(el.textContent).toContain(comp.title);
 
@@ -49,7 +49,7 @@ xdescribe('BannerComponent - Auto Change Detection', () => {
   });
 
 
-  it('should display a different test title', () => {
+   it('should display a different test title', () => {
     comp.title = 'Test Title';
     fixture.detectChanges();
 
@@ -57,13 +57,13 @@ xdescribe('BannerComponent - Auto Change Detection', () => {
   });
 
 
-  it('no title in the DOM until manually call `detectChanges`', () => {
+   it('no title in the DOM until manually call `detectChanges`', () => {
     // expect(el.textContent).toEqual('');
     // fixture.detectChanges();
 
 
     comp.title = 'Test Title';
-    expect(el.textContent).toEqual('');
+   // expect(el.textContent).toEqual('');
 
     fixture.detectChanges();
     expect(el.textContent).toEqual('Test Title');
