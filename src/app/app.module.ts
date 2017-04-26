@@ -6,19 +6,22 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
 import { BannerExternalTemplateComponent } from './banner-external-template/banner-external-template.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { UserService } from "./model/user.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     BannerComponent,
-    BannerExternalTemplateComponent
+    BannerExternalTemplateComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
