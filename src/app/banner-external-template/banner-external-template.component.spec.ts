@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { By } from '@angular/platform-browser'
 import { DebugElement } from '@angular/core'
+import { async } from '@angular/core/testing';
+
 
 import { BannerExternalTemplateComponent as BannerComponent } from './banner-external-template.component';
 
@@ -13,7 +15,27 @@ describe('BannerComponent - from external template', () => {
 
   console.log('banner spec start');
 
+
+  // async beforeEach
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ BannerComponent ], // declare the test component
+    })
+      .compileComponents();  // compile template and css
+  }));
+
+  // synchronous beforeEach
   beforeEach(() => {
+    fixture = TestBed.createComponent(BannerComponent);
+
+    comp = fixture.componentInstance; // BannerComponent test instance
+
+    // query for the title <h1> by CSS element selector
+    de = fixture.debugElement.query(By.css('h1'));
+    el = de.nativeElement;
+  });
+
+  /*beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [BannerComponent]
     });
@@ -26,7 +48,7 @@ describe('BannerComponent - from external template', () => {
     de = fixture.debugElement.query(By.css('h1'));
     el = de.nativeElement;
   });
-
+*/
 
   it('should display original title', () => {
     fixture.detectChanges();
