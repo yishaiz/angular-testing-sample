@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerExternalTemplateComponent implements OnInit {
 
+  title = 'Test Tour of Heroes';
+
+
   constructor() { }
 
   ngOnInit() {
   }
-
-  title = 'Test Tour of Heroes';
-
 }
