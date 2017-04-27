@@ -3,13 +3,13 @@ import { UserService }       from '../model/user.service';
 
 @Component({
   selector: 'app-welcome',
-  template: '<h3 class="welcome" ><i>{{welcome}}</i></h3>'
+  template: '<h3 class="welcome"><i>{{welcome}}</i></h3>'
 })
 export class WelcomeComponent implements OnInit {
   welcome = '-- not initialized yet --';
 
   // constructor(@Optional() private userService : UserService) {
-  constructor( private userService : UserService) {
+  constructor(private userService : UserService) {
   }
 
   ngOnInit() : void {
