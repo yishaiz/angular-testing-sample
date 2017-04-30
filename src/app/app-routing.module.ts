@@ -14,10 +14,3 @@ import { AboutComponent } from './about/about.component';
   exports: [ RouterModule ] // re-export the module declarations
 })
 export class AppRoutingModule { };
-
-
-/*
-Copyright 2017 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
