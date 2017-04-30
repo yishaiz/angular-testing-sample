@@ -1,13 +1,49 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import { BannerComponent } from "./banner/banner.component";
+// import { WelcomeComponent } from "./welcome/welcome.component";
+import { AppRoutingModule } from "./app-routing.module";
+import { Component } from "@angular/core";
+import { RouterLinkStubDirective, RouterOutletStubComponent } from "../testing/router-stubs";
+import { AboutComponent } from "./about/about.component";
+import { TwainComponent } from "./shared/twain.component";
+import { APP_BASE_HREF } from "@angular/common";
+
+
+@Component({
+  selector: 'app-welcome', template: ''
+})
+class WelcomeStubComponent {
+
+}
+
+@Component({
+  selector: 'app-about', template: ''
+})
+class AboutStubComponent {
+
+}
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        BannerComponent,
+        WelcomeStubComponent,
+        AboutComponent,
+        TwainComponent,
+        RouterLinkStubDirective,
+        RouterOutletStubComponent
+
       ],
+      imports: [
+        AppRoutingModule,
+      ],
+      providers: [
+        { provide: APP_BASE_HREF, useValue: '/' }
+      ]
     }).compileComponents();
   }));
 
@@ -37,8 +73,8 @@ describe('AppComponent', () => {
 
 
   it('doSomething should should "abc"', async(() => {
-    const expected='abc' ;
-    expect(doSomething() ).toEqual(expected);
+    const expected = 'abc';
+    expect(doSomething()).toEqual(expected);
   }));
 
 

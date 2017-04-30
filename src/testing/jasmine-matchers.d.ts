@@ -1,9 +1,7 @@
-import { Injectable } from '@angular/core';
-
-@Injectable()
-export class UserService {
-  isLoggedIn = true;
-  user = {name: 'Sam Spade'};
+declare namespace jasmine {
+  interface Matchers {
+    toHaveText(actual: any, expectationFailOutput?: any): jasmine.CustomMatcher;
+  }
 }
 
 

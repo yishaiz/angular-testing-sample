@@ -9,7 +9,6 @@ export class BannerExternalTemplateComponent implements OnInit {
 
   title = 'Test Tour of Heroes';
 
-
   constructor() { }
 
   ngOnInit() {

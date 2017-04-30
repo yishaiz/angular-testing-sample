@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-// import { BannerComponent } from './banner/banner.component';
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'my-app',
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'app works with tests !';

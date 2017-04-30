@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+// Model barrel
+export * from './hero';
+export * from './hero.service';
+export * from './http-hero.service';
+export * from './test-heroes';
 
-@Injectable()
-export class UserService {
-  isLoggedIn = true;
-  user = {name: 'Sam Spade'};
-}
+export * from './user.service';
 
 
 /*

@@ -1,10 +1,4 @@
-import { Injectable } from '@angular/core';
-
-@Injectable()
-export class UserService {
-  isLoggedIn = true;
-  user = {name: 'Sam Spade'};
-}
+export * from './fake-hero.service';
 
 
 /*
