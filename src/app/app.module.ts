@@ -8,6 +8,14 @@ import { BannerComponent } from './banner/banner.component';
 import { BannerExternalTemplateComponent } from './banner-external-template/banner-external-template.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { UserService } from "./model/user.service";
+/*
+import { TwainComponent } from './shared/twain.component';
+import { TwainService } from "./shared/twain.service";
+*/
+
+
+import { TwainComponent } from './shared/twain/twain.component';
+import { TwainService } from "./shared/twain/twain.service";
 
 @NgModule({
   declarations: [
@@ -15,13 +23,19 @@ import { UserService } from "./model/user.service";
     BannerComponent,
     BannerExternalTemplateComponent,
     WelcomeComponent
+    // TwainComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [UserService],
-  bootstrap: [AppComponent]
+  providers: [
+    UserService,
+    TwainService//todo: check if must
+  ],
+  //
+  bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+}
