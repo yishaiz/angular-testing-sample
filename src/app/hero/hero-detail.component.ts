@@ -7,26 +7,26 @@ import { Hero }              from '../model';
 import { HeroDetailService } from './hero-detail.service';
 
 @Component({
-  selector:    'app-hero-detail',
+  selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
-  styleUrls:  ['./hero-detail.component.css' ],
-  providers:  [ HeroDetailService ]
+  styleUrls: [ './hero-detail.component.css' ],
+  providers: [ HeroDetailService ]
 })
 export class HeroDetailComponent implements OnInit {
-  constructor(
-    private heroDetailService: HeroDetailService,
-    private route:  ActivatedRoute,
-    private router: Router) {
+  constructor(private heroDetailService : HeroDetailService,
+              private route : ActivatedRoute,
+              private router : Router) {
   }
 
-  @Input() hero: Hero;
+  @Input() hero : Hero;
 
-  ngOnInit(): void {
+  ngOnInit() : void {
     // get hero when `id` param changes
-    this.route.params.subscribe(p => this.getHero(p && p['id']));
+    this.route.params
+      .subscribe(p => this.getHero(p && p[ 'id' ]));
   }
 
-  private getHero(id: string): void {
+  private getHero(id : string) : void {
     // when no id or id===0, create new hero
     if (!id) {
       this.hero = new Hero();
@@ -42,14 +42,16 @@ export class HeroDetailComponent implements OnInit {
     });
   }
 
-  save(): void {
+  save() : void {
     this.heroDetailService.saveHero(this.hero).then(() => this.gotoList());
   }
 
-  cancel() { this.gotoList(); }
+  cancel() {
+    this.gotoList();
+  }
 
   gotoList() {
-    this.router.navigate(['../'], {relativeTo: this.route});
+    this.router.navigate([ '../' ], { relativeTo: this.route });
   }
 }
 
@@ -58,4 +60,4 @@ export class HeroDetailComponent implements OnInit {
 
 
 
-*/
+ */

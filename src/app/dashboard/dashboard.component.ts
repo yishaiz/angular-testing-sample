@@ -10,11 +10,10 @@ import { Hero, HeroService } from '../model';
 })
 export class DashboardComponent implements OnInit {
 
-  heroes: Hero[] = [];
+  heroes : Hero[] = [];
 
-  constructor(
-    private router: Router,
-    private heroService: HeroService) {
+  constructor(private router : Router,
+              private heroService : HeroService) {
   }
 
   ngOnInit() {
@@ -22,7 +21,7 @@ export class DashboardComponent implements OnInit {
       .then(heroes => this.heroes = heroes.slice(1, 5));
   }
 
-  gotoDetail(hero: Hero) {
+  gotoDetail(hero : Hero) {
     let url = `/heroes/${hero.id}`;
     this.router.navigateByUrl(url);
   }
@@ -30,7 +29,7 @@ export class DashboardComponent implements OnInit {
   get title() {
     let cnt = this.heroes.length;
     return cnt === 0 ? 'No Heroes' :
-      cnt === 1 ? 'Top Hero' :  `Top ${cnt} Heroes`;
+      cnt === 1 ? 'Top Hero' : `Top ${cnt} Heroes`;
   }
 }
 
@@ -39,4 +38,4 @@ export class DashboardComponent implements OnInit {
 
 
 
-*/
+ */

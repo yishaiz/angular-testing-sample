@@ -11,14 +11,10 @@ export class DashboardHeroComponent {
   @Input() hero : Hero;
   @Output() selected = new EventEmitter<Hero>();
 
+  // clickOnHero() {
   click() {
     this.selected.emit(this.hero);
   }
 }
 
 
-/*
-
-
-
- */
