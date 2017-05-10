@@ -56,8 +56,8 @@ describe('AppComponent', () => {
       ],
       providers: [
         { provide: APP_BASE_HREF, useValue: '/' },
-        { provide: UsersService, useClass: MockUsersService },
-        Http
+        { provide: UsersService, useClass: MockUsersService }
+        // ,        Http
       ]
     }).compileComponents();
   }));

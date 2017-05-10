@@ -2,6 +2,9 @@ import { Http } from "@angular/http";
 import { Inject } from "@angular/core";
 import { Observable } from "rxjs/Observable";
 
+import 'rxjs/add/observable/of';
+
+
 let users = [
   {
     "login": "defunkt",
@@ -560,7 +563,7 @@ let users = [
     "avatar_url": "https://avatars1.githubusercontent.com/u/47?v=3",
     "gravatar_id": "",
     "url": "https://api.github.com/users/jnewland",
-    "html_url" :"https://github.com/jnewland",
+    "html_url": "https://github.com/jnewland",
     "followers_url": "https://api.github.com/users/jnewland/followers",
     "following_url": "https://api.github.com/users/jnewland/following{/other_user}",
     "gists_url": "https://api.github.com/users/jnewland/gists{/gist_id}",
@@ -582,8 +585,8 @@ export class MockUsersService {
     this.http = http;
   }
 
-  getUsers(since : number)   {
-   return users;
+  getUsers(since : number) : Observable<any> {
+    return Observable.of(users);
   }
 
 }
