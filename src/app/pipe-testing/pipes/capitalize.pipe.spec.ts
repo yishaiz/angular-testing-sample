@@ -12,8 +12,6 @@ describe('CapitalizePipe', () => {
     let result : string = pipe.transform('golden retriever', null);
 
     expect(result).toEqual('Golden Retriever');
-
-
   });
 });
 

@@ -16,7 +16,9 @@ export class UsersService {
    }
 
   getUsers(since : number) : Observable<any> {
-    var url : string = 'https://api.github.com/users';
+     debugger;
+
+    let url : string = 'https://api.github.com/users';
 
     if (since) {
       url = 'https://api.github.com/users?since=' + since;
