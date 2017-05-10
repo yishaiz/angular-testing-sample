@@ -19,6 +19,8 @@ import { TwainService }     from './shared/twain.service';
 
 import { DashboardModule }  from './dashboard/dashboard.module';
 import { SharedModule }     from './shared/shared.module';
+import { PipeTestingModule } from "./pipe-testing/pipe-testing.module";
+import { HttpModule } from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { SharedModule }     from './shared/shared.module';
     BrowserModule,
     DashboardModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    PipeTestingModule,
+    HttpModule
   ],
   providers: [
     HeroService,

@@ -16,9 +16,9 @@ describe('WelcomeComponent', () => {
   let de : DebugElement;  // the DebugElement with the welcome message
   let el : HTMLElement; // the DOM element with the welcome message
 
-  let userServiceStub : {
-    isLoggedIn : boolean;
-    user : { name : string }
+    let userServiceStub : {
+      isLoggedIn : boolean;
+      user : { name : string }
   };
 
   beforeEach(() => {

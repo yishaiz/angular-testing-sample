@@ -1,3 +1,4 @@
+/*
 /// <reference path="./jasmine-matchers.d.ts" />
 
 ////  Jasmine Custom Matchers ////
@@ -45,8 +46,9 @@ function elementText(n: any): string {
 }
 
 
-/*
+/!*
 
 
 
+*!/
 */
